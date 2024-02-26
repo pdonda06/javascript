@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+  </head>
+  <body>
+    <nav class="block">
+      <p class="para">Welcome to my website</p>
+    </nav>
+    <div class="block">
+      <h4 id="name-block">My name is <span id="username">Prince Donda</span>:)</h4>
+      <p class="para">Here is the code for you</p>
+      <pre><code>console.log('Hey')</code></pre>
+    </div>
+
+    <!-- <button onclick="console.log('I am clicked')">Click Me</button> -->
+    <!-- <button onclick="hundleclick()">Click Me</button> -->
+    <button id="click">Click Me</button>
+
+    <!-- <script>
+        
+        // function hundleclick(){
+            //     console.log("hey I am clicked");
+            //     alert("I am clicked");
+            // }
+    </script> -->
+        
+    <!-- function override -->
+    <!-- <script>
+        const el = document.getElementById('click');
+        el.onclick = () => {
+            console.log("I am clicked");
+        }
+    </script>
+
+    <script>
+        el.onclick = () => {
+            console.log("Hacked");
+        }
+    </script> -->
+
+<!-- 
+    <script>
+        const el = document.getElementById('click');
+        el.addEventListener('click', () => {
+            console.log('I am clicked');
+        })
+    </script>
+    <script>
+        el.addEventListener('click', () => {
+            console.log('Hacked');
+        })
+    </script> -->
+
+    <script>
+            const el = document.getElementById('click');
+            const nameblock= document.getElementById('name-block');
+
+            el.addEventListener('click', () => {
+                if(nameblock.style.color === 'red'){
+                    nameblock.style.color = 'blue'
+                }
+                else{
+                    nameblock.style.color = 'red'
+                }
+            })
+    </script>
+
+
+  </body>
+</html>

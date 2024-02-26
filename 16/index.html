@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+
+  </head>
+  <body>
+    <nav class="block">
+      <p class="para">Welcome to my website</p>
+    </nav>
+    <div class="block">
+      <h4>
+        My name is <span class="red-color" id="username">Prince Donda</span>:)
+      </h4>
+      <p class="para">Here is the code for you</p>
+      <pre><code>console.log('Hey')</code></pre>
+    </div>
+
+    <div id="my-container"></div>
+    <button id="clickButton">Click me</button>
+
+    <script>
+        // asynchronous --> promises return hoga
+        let a=10;
+        let b=20;
+        let result = a+b;
+        
+        async function getData(){
+            let resFromServer =await fetch(
+                'https://jsonplaceholder.typicode.com/posts'
+            );
+            console.log(await resFromServer.json());
+        }
+        
+        getData();
+        console.log(result);
+        
+        // not recommended
+        // fetch('https://jsonplaceholder.typicode.com/posts')
+        // .then((data) => {
+        //     console.log(data);
+        // })
+        // .catch((error)=>{
+        //     console.log(error);
+        // })
+        // console.log(result);
+
+    </script>
+  </body>
+</html>
